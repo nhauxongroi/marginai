@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuantumBlack, AI by McKinsey</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #031119;
+        color: #e0e0e0;
+      }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-[#050e13] text-gray-200 overflow-x-hidden">
+    <!-- ===== Hero Section ===== -->
+    <header
+      class="relative h-screen w-full flex flex-col text-white overflow-hidden"
+    >
+      <!-- Video Background -->
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        id="fading-video"
+        class="hero-video"
+      >
+        <!-- THAY THẾ 'placeholder-video.mp4' BẰNG ĐƯỜNG DẪN VIDEO CỦA BẠN -->
+        <source src="assets/media/splashvideo.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+      </video>
+
+      <!-- Lớp phủ tối -->
+      <div class="absolute inset-0 bg-[#0c141a] bg-opacity-50 z-0"></div>
+
+      <div class="relative z-10 flex flex-col flex-grow">
+        <!-- Thanh điều hướng -->
+        <nav class="container mx-auto px-6 py-4 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <button
+                id="mobile-menu-button"
+                class="lg:hidden text-white focus:outline-none"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              </button>
+              <a href="#" class="flex items-center space-x-2">
+                <!-- THAY THẾ LOGO -->
+                <img
+                  src="https://placehold.co/40x40/ffffff/000000?text=QB"
+                  alt="Logo"
+                  class="h-8 w-8"
+                />
+                <span class="text-sm font-semibold leading-tight"
+                  >Margin AI<br />AI Automation for Traditional Businesses</span
+                >
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center space-x-6 text-sm">
+              <div class="flex flex-col items-start -space-y-1">
+                <span class="text-xs text-gray-400"
+                  >Artificial Intelligence</span
+                >
+                <a
+                  href="index.html"
+                  class="hover:text-blue-400 border-b-2 border-white pb-1"
+                  >Overview</a
+                >
+              </div>
+              <a href="our-approach.html" class="hover:text-blue-400"
+                >Our Approach</a
+              >
+              <a href="labs.html" class="hover:text-blue-400">Labs</a>
+              <a href="case-studies.html" class="hover:text-blue-400"
+                >Case Studies</a
+              >
+              <a href="our-insights.html" class="hover:text-blue-400"
+                >Our Insights</a
+              >
+              <a href="our-people.html" class="hover:text-blue-400"
+                >Our People</a
+              >
+              <a href="contact-us.html" class="hover:text-blue-400"
+                >Contact Us</a
+              >
+            </div>
+            <div class="lg:hidden">
+              <button class="hover:text-blue-400">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Menu di động (ẩn mặc định) -->
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden bg-[#050e13] bg-opacity-90 absolute top-16 left-0 w-full z-20"
+        >
+          <div
+            class="container mx-auto px-6 py-4 flex flex-col space-y-4 text-center"
+          >
+            <a href="index.html" class="hover:text-blue-400">Overview</a>
+            <a href="our-approach.html" class="hover:text-blue-400"
+              >Our Approach</a
+            >
+            <a href="#" class="hover:text-blue-400">Labs</a>
+            <a href="#" class="hover:text-blue-400">Case Studies</a>
+            <a href="#" class="hover:text-blue-400">Our Insights</a>
+            <a href="#" class="hover:text-blue-400">Our People</a>
+            <a href="#" class="hover:text-blue-400">Contact Us</a>
+            <hr class="border-gray-700" />
+            <a href="#" class="hover:text-blue-400">Sign In</a>
+            <a href="#" class="hover:text-blue-400">Subscribe</a>
+          </div>
+        </div>
+
+        <!-- Nội dung chính của Hero -->
+        <div class="flex-grow flex items-center justify-center text-center">
+          <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold">
+              Artificial Intelligence
+            </h1>
+            <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+              We build AI-powered workflows that solve the toughest sales and
+              marketing inefficiencies in traditional SMEs—without requiring any
+              technical background.
+            </p>
+            <a
+              href="#"
+              class="inline-block mt-8 px-6 py-3 border border-white hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Start with a Free Pilot →
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-16 px-4 md:px-16 lg:px-32 xl:px-64 md:py-24">
+        <div class="container mx-auto px-4 md:px-8 max-w-4xl text-center">
+          <h2 class="text-3xl md:text-4xl font-serif leading-tight">
+            The Pain is Real
+          </h2>
+          <div class="mt-8 space-y-6 md:text-lg text-gray-300 text-left">
+            <p>
+              Traditional SMEs face rising pressure to digitize—but most lack
+              the in-house expertise to do so effectively.
+            </p>
+            <p>
+              Sales and marketing are stuck in manual loops, inconsistent
+              workflows, and missed opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-16 px-4 md:px-16 lg:px-32 xl:px-64 md:py-24 bg-[#0c141a]"
+      >
+        <div class="container mx-auto px-4 md:px-8">
+          <h3 class="text-center bold tracking-widest text-3xl mb-16">
+            Our Solution
+          </h3>
+
+          <div class="space-y-20">
+            <!-- Row 1: Hybrid Intelligence -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="w-full h-auto rounded-lg"
+                >
+                  <!-- THAY THẾ 'placeholder-video.mp4' BẰNG ĐƯỜNG DẪN VIDEO CỦA BẠN -->
+                  <source src="assets/media/2.mp4" type="video/mp4" />
+                  Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+              </div>
+              <div>
+                <h4 class="text-xl font-serif mb-4 p-2">
+                  Hybrid Intelligence. Real Results. Zero Guesswork.
+                </h4>
+                <p class="text-gray-300 mb-4 p-2">
+                  At Margin AI, we combine the precision of automation with the
+                  insight of your team. Our flagship service delivers targeted
+                  AI workflows that create measurable ROI
+                </p>
+                <a href="#" class="text-blue-400 hover:underline"
+                  >Starting with a free pilot →</a
+                >
+              </div>
+            </div>
+
+            <!-- Row 2: QuantumBlack Labs -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="md:order-2">
+                <!-- THAY THẾ HÌNH ẢNH -->
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="w-full h-auto rounded-lg"
+                >
+                  <!-- THAY THẾ 'placeholder-video.mp4' BẰNG ĐƯỜNG DẪN VIDEO CỦA BẠN -->
+                  <source src="assets/media/1.mp4" type="video/mp4" />
+                  Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+              </div>
+              <div class="md:order-1">
+                <h4 class="text-xl font-serif mb-4 p-2">QuantumBlack Labs</h4>
+                <p class="text-gray-300 mb-4 p-2">
+                  Our center of learning dedicated to driving innovation and
+                  experimentation in AI, QuantumBlack Labs is where
+                  technologists, designers, and product managers build
+                  cutting-edge tools and assets that reduce risk and accelerate
+                  impact at every stage of the AI transformation journey.
+                </p>
+                <a href="#" class="text-blue-400 hover:underline"
+                  >Learn more about QuantumBlack Labs →</a
+                >
+              </div>
+            </div>
+
+            <!-- Row 3: Open ecosystem of alliances -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <!-- THAY THẾ LOGO ĐỐI TÁC -->
+                <div class="grid grid-cols-4 gap-x-8 gap-y-6 bg-white p-6">
+                  <img
+                    src="https://placehold.co/120x40/ffffff/000000?text=SPARK"
+                    alt="Spark"
+                    class="h-8 w-full object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <h4 class="text-3xl font-serif mb-4 p-2">
+                  Open ecosystem of alliances
+                </h4>
+                <p class="text-gray-300 mb-4 p-2">
+                  QuantumBlack has developed an open ecosystem of strategic
+                  alliances that deliver the complex capabilities necessary for
+                  generative AI implementations.
+                </p>
+                <a href="#" class="text-blue-400 hover:underline"
+                  >See all alliances & acquisitions →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section 4: Our Offerings ===== -->
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+          <h3 class="text-center text-gray-400 tracking-widest text-sm mb-12">
+            OUR OFFERINGS
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div
+              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <h4
+                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
+              >
+                Artificial Intelligence
+              </h4>
+              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
+                We partner with organizations to unleash new possibilities by
+                putting the right people, processes, and technology in place to
+                scale AI.
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:underline group-hover:text-blue-200"
+                >Learn more about AI →</a
+              >
+            </div>
+            <div
+              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <h4
+                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
+              >
+                Data Transformation
+              </h4>
+              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
+                We help organizations unlock the true value of data and build
+                performance by making lasting improvements in technology,
+                processes, and capabilities.
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:underline group-hover:text-blue-200"
+                >Learn more about data transformation →</a
+              >
+            </div>
+            <div
+              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <h4
+                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
+              >
+                Internet of Things
+              </h4>
+              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
+                We partner with clients to turn IoT into real business value
+                with improved operations, connected products and services, and
+                entirely new businesses.
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:underline group-hover:text-blue-200"
+                >Learn more about IoT →</a
+              >
+            </div>
+            <div
+              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <h4
+                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
+              >
+                Digital Twins
+              </h4>
+              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
+                We help organizations to build virtual replicas of their assets,
+                processes and people by simulating real situations, allowing
+                them to make better decisions.
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:underline group-hover:text-blue-200"
+                >Learn more about Digital Twins →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section 5: Impact ===== -->
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+          <h3 class="text-center text-gray-400 tracking-widest text-sm mb-12">
+            EXAMPLES OF OUR IMPACT
+          </h3>
+          <div class="grid lg:grid-cols-2 gap-2 mb-8">
+            <!-- THAY THẾ HÌNH ẢNH -->
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <img
+                src="https://placehold.co/800x500/818cf8/ffffff?text=Aviva"
+                alt="Aviva"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-center hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <p class="text-sm text-gray-400 p-2">Case Study</p>
+              <h4 class="text-3xl md:text-4xl font-serif my-4 p-2">
+                Aviva: Rewiring the insurance claims journey with AI >
+              </h4>
+              <p class="text-gray-300 mb-2 p-2">
+                December 10, 2024 – By instilling a digital-first culture
+                augmented by AI, Aviva is settling claims faster, more
+                accurately, and with better outcomes for customers
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/34d399/ffffff?text=Green+Gen+AI"
+                alt="Green Gen AI"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Blog Post</p>
+              <h4 class="text-xl font-serif my-2 group-hover:text-blue-200 p-2">
+                With gen AI, helping green businesses strengthen our 'blue
+                economy' >
+              </h4>
+              <p class="text-sm text-gray-400 group-hover:text-blue-200 p-2">
+                March 13, 2024 - Using
+              </p>
+            </div>
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/60a5fa/ffffff?text=Banking"
+                alt="Banking Innovation"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Case Study</p>
+              <h4 class="text-xl font-serif my-2 group-hover:text-blue-200 p-2">
+                Banking on innovation: How ING uses generative AI to put people
+                first >
+              </h4>
+              <p class="text-sm text-gray-400 group-hover:text-blue-200 p-2">
+                January 9, 2024 - The global
+              </p>
+            </div>
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/fbbf24/ffffff?text=Formula+E"
+                alt="Formula E"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Blog Post</p>
+              <h4 class="text-xl font-serif my-2 group-hover:text-blue-200 p-2">
+                A world record for Formula E, propelled by McKinsey’s AI >
+              </h4>
+              <p class="text-sm text-gray-400 p-2">
+                August 2, 2023 - McKinsey has
+              </p>
+            </div>
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/c084fc/ffffff?text=Lilli"
+                alt="Lilli"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Case Study</p>
+              <h4 class="text-xl font-serif my-2 p-2">
+                Rewiring the way McKinsey works with Lilli, our generative AI
+                platform >
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section 6: Leadership ===== -->
+      <section class="py-16 md:py-24 bg-[#0c141a]">
+        <div class="container mx-auto px-4 md:px-8">
+          <h3 class="text-center text-gray-400 tracking-widest text-sm mb-12">
+            OUR LEADERSHIP
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-5xl mx-auto">
+            <div
+              class="border border-gray-700 p-2 text-center hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/150x150/f87171/ffffff?text=AS"
+                alt="Alex Singla"
+                class="w-32 h-32 rounded-full mx-auto mb-6"
+              />
+              <h4 class="text-2xl font-serif">Alex Singla</h4>
+              <p class="text-gray-400 mb-4">Senior Partner, Chicago</p>
+              <p class="text-sm text-gray-300 mb-6">
+                Global leader of QuantumBlack, AI by McKinsey, advises clients
+                on strategy, digital and analytics, and operations enterprise
+                transformations. He serves organizations across industries with
+                a focus on financial services and insurance.
+              </p>
+              <div class="flex justify-center space-x-4 text-gray-400">
+                <a href="#" class="hover:text-white">...</a>
+                <a href="#" class="hover:text-white">in</a>
+                <a href="#" class="hover:text-white">X</a>
+              </div>
+            </div>
+            <div
+              class="border border-gray-700 p-2 text-center hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/150x150/60a5fa/ffffff?text=AS"
+                alt="Alexander Sukharevsky"
+                class="w-32 h-32 rounded-full mx-auto mb-6"
+              />
+              <h4 class="text-2xl font-serif">Alexander Sukharevsky</h4>
+              <p class="text-gray-400 mb-4">
+                Senior Partner and Managing Partner, QuantumBlack, AI by
+                McKinsey, London
+              </p>
+              <p class="text-sm text-gray-300 mb-6">
+                Global leader of QuantumBlack, AI by McKinsey, helping
+                organizations redefine business models and improve performance
+                through the responsible use of AI and technology.
+              </p>
+              <div class="flex justify-center space-x-4 text-gray-400">
+                <a href="#" class="hover:text-white">...</a>
+                <a href="#" class="hover:text-white">in</a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a
+              href="#"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 transition-colors"
+              >See more people</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section 7: Insights ===== -->
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+          <div class="text-center max-w-3xl mx-auto">
+            <h3 class="text-gray-400 tracking-widest text-sm mb-4">
+              OUR INSIGHTS
+            </h3>
+            <p class="text-lg text-gray-300">
+              From machine learning operations and organizational change to
+              ethical considerations and emerging use cases, our latest thinking
+              on how organizations can most effectively and responsibly use AI
+              to create business value.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-12"
+          >
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/a78bfa/ffffff?text=Superagency"
+                alt="Superagency"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Report</p>
+              <h4 class="text-xl font-serif my-2 group-hover:text-blue-200 p-2">
+                Superagency in the workplace: Empowering people to unlock AI's
+                full potential >
+              </h4>
+            </div>
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/f472b6/ffffff?text=AI+for+IT"
+                alt="AI for IT modernization"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Article</p>
+              <h4 class="text-xl font-serif my-2 group-hover:text-blue-200 p-2">
+                AI for IT modernization: Faster, cheaper, better >
+              </h4>
+              <p class="text-sm text-gray-400 p-2">
+                December 2, 2024 - Gen AI agents are starting to deliver
+              </p>
+            </div>
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/22d3ee/ffffff?text=AI+Trust"
+                alt="AI trust"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Article</p>
+              <h4 class="text-xl font-serif my-2 group-hover:text-blue-200 p-2">
+                Building AI trust: The key role of explainability >
+              </h4>
+              <p class="text-sm text-gray-400 p-2">
+                November 26, 2024 - AI systems are powerful but often operate
+              </p>
+            </div>
+            <div
+              class="hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+            >
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/400x250/3b82f6/ffffff?text=Digital+Twins"
+                alt="Digital twins"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">Article</p>
+              <h4 class="text-xl font-serif my-2 group-hover:text-blue-200 p-2">
+                Digital twins: The key to unlocking end-to-end supply chain
+                growth >
+              </h4>
+              <p class="text-sm text-gray-400 p-2">
+                November 20, 2024 - Complexity,
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section 8: Featured Blogs ===== -->
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+          <div class="text-center max-w-3xl mx-auto">
+            <h3 class="text-gray-400 tracking-widest text-sm mb-4">
+              FEATURED BLOGS
+            </h3>
+            <p class="text-lg text-gray-300">
+              Read more about our AI-driven value-creation work on our Medium
+              blog and the New at McKinsey blog.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-2 mt-12">
+            <div>
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/600x400/0ea5e9/ffffff?text=Generative+AI"
+                alt="Generative AI Impact"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">
+                QuantumBlack Medium blog post
+              </p>
+              <h4 class="text-2xl font-serif my-2 p-2">
+                Delivering tangible business impact from generative AI >
+              </h4>
+              <a href="#" class="text-sm text-blue-400 hover:underline"
+                >See all posts on QuantumBlack's Medium blog</a
+              >
+            </div>
+            <div>
+              <!-- THAY THẾ HÌNH ẢNH -->
+              <img
+                src="https://placehold.co/600x400/ec4899/ffffff?text=C3+AI"
+                alt="C3 AI Collaboration"
+                class="w-full h-auto mb-4"
+              />
+              <p class="text-sm text-gray-400 p-2">New at McKinsey blog post</p>
+              <h4 class="text-2xl font-serif my-2 p-2">
+                A new strategic collaboration, McKinsey and C3 AI accelerate
+                enterprise AI transformations >
+              </h4>
+              <a href="#" class="text-sm text-blue-400 hover:underline"
+                >See all posts →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-[#050e13] text-gray-300">
+      <div class="container mx-auto px-6 lg:px-8 py-12">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8"
+        >
+          <h3 class="text-3xl font-serif mb-4 md:mb-0">
+            Connect with QuantumBlack
+          </h3>
+          <a
+            href="#"
+            class="bg-gray-200 hover:bg-white text-black font-bold py-3 px-6 transition-colors rounded-sm"
+            >Contact us</a
+          >
+        </div>
+        <div class="py-8 border-b border-gray-700">
+          <a
+            href="#"
+            class="inline-flex items-center space-x-2 mr-6 hover:text-white"
+          >
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center space-x-2 hover:text-white"
+          >
+            <i class="fab fa-medium"></i>
+            <span>Medium</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-1">
+            <img
+              src="https://www.mckinsey.com/~/media/mckinsey/dotcom/images/global/mckinsey_logo_white.svg"
+              alt="McKinsey & Company"
+              class="h-6 mb-8"
+            />
+            <h5 class="font-bold mb-4">Subscribe</h5>
+            <p class="text-sm text-gray-400 mb-4">
+              Select topics and stay current with our latest insights
+            </p>
+            <form class="flex items-center">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="bg-transparent border border-gray-500 py-2 px-3 w-full focus:outline-none focus:border-white rounded-l-sm"
+              />
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-r-sm"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+              <div>
+                <a href="#" class="hover:underline">Contact us</a><br />
+                <a href="#" class="hover:underline">Scam warning</a><br />
+                <a href="#" class="hover:underline">FAQ</a>
+              </div>
+              <div>
+                <a href="#" class="hover:underline">Privacy policy</a><br />
+                <a href="#" class="hover:underline">Your privacy choices</a
+                ><br />
+                <a href="#" class="hover:underline">Cookie preferences</a>
+              </div>
+              <div>
+                <a href="#" class="hover:underline">Terms of use</a><br />
+                <a href="#" class="hover:underline"
+                  >Local language information</a
+                >
+              </div>
+              <div>
+                <a href="#" class="hover:underline">Accessibility statement</a>
+              </div>
+            </div>
+            <div class="flex space-x-4 mt-8">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-x-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fa fa-rss"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 mt-12 pt-8 border-t border-gray-700"
+        >
+          <p>&copy; 1996-2025 McKinsey & Company</p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <p class="text-right">
+              McKinsey Insights - Get our latest thinking on your iPhone, iPad,
+              or Android device.
+            </p>
+
+            <a href="#"
+              ><img
+                src="https://www.mckinsey.com/~/media/mckinsey/dotcom/images/global/app_store_badge.svg"
+                alt="Download on the App Store"
+                class="h-10"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://www.mckinsey.com/~/media/mckinsey/dotcom/images/global/google_play_badge.svg"
+                alt="Get it on Google Play"
+                class="h-10"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+/* Tùy chỉnh font chữ */
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: "EB Garamond", serif;
+}
+/* Đảm bảo video nền bao phủ toàn bộ */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+.hero-overlay {
+  background-color: rgba(5, 14, 19, 0.5);
+}
+.section-divider {
+  border-color: #374151; /* gray-700 */
+}
+.card-bg {
+  background-color: #111827; /* gray-900 */
+}
+.link-style {
+  color: #3b82f6; /* blue-500 */
+  text-decoration: underline;
+}
+
+#fading-video {
+  opacity: 0;
+  transition: opacity 0.5s linear; /* Điều chỉnh 0.5s để thay đổi tốc độ fade */
+}

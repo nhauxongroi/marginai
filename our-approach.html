@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Approach - QuantumBlack, AI by McKinsey</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      .icon-style {
+        height: 64px;
+        width: 64px;
+        stroke: #9ca3af;
+        stroke-width: 0.5;
+        fill: none;
+        transition: stroke 0.3s ease;
+      }
+
+      .icon-wrapper {
+        transition: transform 0.3s ease;
+      }
+      .icon-wrapper:hover {
+        transform: translateY(-5px);
+      }
+      .icon-wrapper:hover .icon-style {
+        stroke: #fff;
+      }
+
+      .principle-card {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        border-radius: 4px;
+      }
+      .principle-card:hover {
+        transform: translateY(-8px);
+        background-color: #111c22;
+      }
+
+      .parallax-section {
+        background-image: url("assets/media/AI_image.jpg");
+        min-height: 40vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .parallax-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(5, 14, 19, 0.6);
+      }
+
+      .principle-card {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #273138;
+        transition: transform 0.3s ease, background-color 0.3s ease,
+          border-color 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 4px;
+      }
+
+      .principle-card:hover {
+        transform: translateY(-10px);
+        background-color: #111c22;
+        border-color: #60a5fa;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .principle-number {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: "EB Garamond", serif;
+        color: rgb(255, 255, 255);
+        z-index: 0;
+        transition: color 0.3s ease;
+      }
+
+      .principle-card:hover .principle-number {
+        color: rgba(96, 165, 250, 0.15);
+      }
+
+      .principle-card h4,
+      .principle-card p {
+        position: relative;
+        z-index: 1;
+      }
+
+      .principle-card:hover h4 {
+        color: #fff;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #031119;
+        color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body class="bg-[#050e13] text-gray-200 overflow-x-hidden">
+    <header
+      class="relative h-screen w-full flex flex-col text-white overflow-hidden"
+    >
+      <!-- Video Background -->
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        id="fading-video"
+        class="hero-video"
+      >
+        <!-- THAY THẾ 'placeholder-video.mp4' BẰNG ĐƯỜNG DẪN VIDEO CỦA BẠN -->
+        <source src="assets/media/splashvideo.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+      </video>
+
+      <!-- Lớp phủ tối -->
+      <div class="absolute inset-0 bg-[#0c141a] bg-opacity-50 z-0"></div>
+
+      <div class="relative z-10 flex flex-col flex-grow">
+        <!-- Thanh điều hướng -->
+        <nav class="container mx-auto px-6 py-4 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <button
+                id="mobile-menu-button"
+                class="lg:hidden text-white focus:outline-none"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              </button>
+              <a href="#" class="flex items-center space-x-2">
+                <!-- THAY THẾ LOGO -->
+                <img
+                  src="https://placehold.co/40x40/ffffff/000000?text=QB"
+                  alt="Logo"
+                  class="h-8 w-8"
+                />
+                <span class="text-sm font-semibold leading-tight"
+                  >QuantumBlack<br />AI by McKinsey</span
+                >
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center space-x-6 text-sm">
+              <div class="flex flex-col items-start -space-y-1">
+                <span class="text-xs text-gray-400"
+                  >Artificial Intelligence</span
+                >
+                <a href="index.html" class="hover:text-blue-400">Overview</a>
+              </div>
+              <a
+                href="our-approach.html"
+                class="hover:text-blue-400 border-b-2 border-white pb-1"
+                >Our Approach</a
+              >
+              <a href="labs.html" class="hover:text-blue-400">Labs</a>
+              <a href="case-studies.html" class="hover:text-blue-400"
+                >Case Studies</a
+              >
+              <a href="our-insights.html" class="hover:text-blue-400"
+                >Our Insights</a
+              >
+              <a href="our-people.html" class="hover:text-blue-400"
+                >Our People</a
+              >
+              <a href="contact-us.html" class="hover:text-blue-400"
+                >Contact Us</a
+              >
+            </div>
+            <div class="lg:hidden">
+              <button class="hover:text-blue-400">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Menu di động (ẩn mặc định) -->
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden bg-[#050e13] bg-opacity-90 absolute top-16 left-0 w-full z-20"
+        >
+          <div
+            class="container mx-auto px-6 py-4 flex flex-col space-y-4 text-center"
+          >
+            <a href="index.html" class="hover:text-blue-400">Overview</a>
+            <a href="#" class="hover:text-blue-400">Our Approach</a>
+            <a href="#" class="hover:text-blue-400">Labs</a>
+            <a href="#" class="hover:text-blue-400">Case Studies</a>
+            <a href="#" class="hover:text-blue-400">Our Insights</a>
+            <a href="#" class="hover:text-blue-400">Our People</a>
+            <a href="#" class="hover:text-blue-400">Contact Us</a>
+            <hr class="border-gray-700" />
+            <a href="#" class="hover:text-blue-400">Sign In</a>
+            <a href="#" class="hover:text-blue-400">Subscribe</a>
+          </div>
+        </div>
+
+        <!-- Nội dung chính của Hero -->
+        <div class="flex-grow flex items-center justify-center text-center">
+          <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold">
+              Hybrid intelligence
+            </h1>
+            <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+              Power of technology + power of people
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- <section
+        class="relative h-[60vh] md:h-[70vh] flex flex-col justify-center items-center text-white text-center px-6 overflow-hidden"
+      >
+        <video autoplay loop muted playsinline class="hero-video">
+          <source src="assets/media/splashvideo.mp4" type="video/mp4" />
+        </video>
+
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+        <div class="relative z-10">
+          <p class="text-sm tracking-widest text-gray-400 mb-4">OUR APPROACH</p>
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold">
+            Hybrid intelligence
+          </h1>
+          <p class="mt-4 text-lg md:text-xl">
+            Power of technology + power of people
+          </p>
+        </div>
+        <div class="absolute bottom-8 text-center animate-bounce z-10">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </div>
+      </section> -->
+
+      <section class="py-16 md:py-24">
+        <div
+          class="container mx-auto px-6 lg:px-8 max-w-4xl text-center space-y-6 text-lg md:text-xl text-gray-300"
+        >
+          <p>
+            The methodology of QuantumBlack, AI by McKinsey, harnesses the power
+            of AI combined with human insight. It blends the agility of
+            multidisciplinary teams, the deepest domain expertise with
+            cutting-edge AI, and the strength of McKinsey’s industry
+            understanding.
+          </p>
+          <p>
+            This balance unlocks hybrid intelligence—the competitive advantage
+            that helps organizations innovate and thrive.
+          </p>
+        </div>
+      </section>
+
+      <section class="parallax-section">
+        <div class="parallax-overlay"></div>
+      </section>
+
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6 lg:px-8">
+          <h2 class="text-4xl md:text-5xl font-serif text-center mb-16">
+            How we deliver hybrid intelligence
+          </h2>
+          <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
+            <div class="space-y-12">
+              <h3 class="text-center text-gray-400 tracking-widest text-sm">
+                OUR WORLD-CLASS PEOPLE
+              </h3>
+              <div class="grid grid-cols-2 gap-x-8 gap-y-10 text-center">
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <circle cx="12" cy="5" r="2"></circle>
+                    <circle cx="18" cy="9" r="2"></circle>
+                    <circle cx="6" cy="9" r="2"></circle>
+                    <circle cx="12" cy="13" r="2"></circle>
+                    <circle cx="18" cy="17" r="2"></circle>
+                    <circle cx="6" cy="17" r="2"></circle>
+                    <path
+                      d="M12 7v4m0 4v-2m5.2-1.8l-4.4-2.4m-0.8 8.4l-4.4-2.4M6.8 9.2l4.4 2.4m0.8 3.4l4.4 2.4"
+                    ></path>
+                  </svg>
+                  <p>
+                    Rigorous capability building and change management skills
+                  </p>
+                </div>
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <path d="M2 7h20v10H2z"></path>
+                    <path d="M9 17v-2.5M12 17v-2.5M15 17v-2.5"></path>
+                    <path d="M7 4h10"></path>
+                    <path d="M12 4v3"></path>
+                  </svg>
+                  <p>
+                    Risk capabilities for transparency, fairness,
+                    explainability, and ethical AI
+                  </p>
+                </div>
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <rect x="2" y="14" width="20" height="6"></rect>
+                    <rect x="5" y="8" width="14" height="4"></rect>
+                    <rect x="8" y="2" width="8" height="4"></rect>
+                  </svg>
+                  <p>Cutting-edge technical expertise</p>
+                </div>
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="8"></circle>
+                    <circle cx="10" cy="10" r="8"></circle>
+                    <circle cx="14" cy="10" r="8"></circle>
+                  </svg>
+                  <p>Deep capability and domain expertise</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-12">
+              <h3 class="text-center text-gray-400 tracking-widest text-sm">
+                OUR INDUSTRY-LEADING TECH STACK
+              </h3>
+              <div class="grid grid-cols-2 gap-x-8 gap-y-10 text-center">
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <path
+                      d="M2 7h4v4H2zM9 7h4v4H9zM16 7h4v4h-4zM2 14h4v4H2zM9 14h4v4H9zM16 14h4v4h-4z"
+                    ></path>
+                  </svg>
+                  <p>
+                    Modular, best-in-class tools that accelerate impact and
+                    reduce risk
+                  </p>
+                </div>
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <path d="M14 2H2v12h12V2z"></path>
+                    <path
+                      d="M20 8h-4V4h4v4zM20 14h-4v-2h4v2zM20 20h-4v-2h4v2zM8 18H4v-2h4v2z"
+                    ></path>
+                    <circle cx="16" cy="18" r="2"></circle>
+                  </svg>
+                  <p>Industry-specific AI products</p>
+                </div>
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <path d="M12 2l10 6-10 6-10-6 10-6z"></path>
+                    <path d="M2 14l10 6 10-6"></path>
+                    <path d="M2 8l10 6 10-6"></path>
+                  </svg>
+                  <p>Ecosystem of alliances and acquisitions</p>
+                </div>
+                <div class="flex flex-col items-center icon-wrapper">
+                  <svg class="icon-style mb-4" viewBox="0 0 24 24">
+                    <path
+                      d="M4 12c0-3.31 4-6 8-6s8 2.69 8 6-4 6-8 6-8-2.69-8-6z"
+                    ></path>
+                    <path d="M4 6c0 3.31 4 6 8 6s8-2.69 8-6"></path>
+                    <path d="M4 18c0 3.31 4 6 8 6s8-2.69 8-6"></path>
+                  </svg>
+                  <p>
+                    Managed services to support model deployment and monitoring
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24 bg-[#0b1318]">
+        <div class="container mx-auto px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h3 class="text-gray-400 tracking-widest text-sm uppercase">
+              Our Guiding Principles
+            </h3>
+            <h2 class="text-4xl md:text-5xl font-serif text-white mt-2">
+              The foundation of our work
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-8 principle-card">
+              <div class="principle-number">01</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Harmonize humans and AI
+              </h4>
+              <p class="text-gray-400">
+                We harness the power of technology and people to create growth
+                that benefits organizations while supporting a thriving,
+                sustainable, and inclusive society.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">02</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Leverage industry expertise
+              </h4>
+              <p class="text-gray-400">
+                Our deep machine-learning and AI expertise helps us make sense
+                of complex data faster, pinpoint where the greatest value lies,
+                drive adoption, and scale the solution.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">03</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Accelerate impact
+              </h4>
+              <p class="text-gray-400">
+                We hit the ground running. Our operating protocols, proprietary
+                tools, and experienced teams help our clients prove value from
+                day one and realize it quickly.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">04</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Build confidence and trust
+              </h4>
+              <p class="text-gray-400">
+                We build confidence that our AI solutions are socially
+                responsible, ethical, and legal, by being clear about where the
+                insights come from.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">05</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Build with clients, not for them
+              </h4>
+              <p class="text-gray-400">
+                We’re transformation partners working alongside our clients to
+                embed new platforms and give teams the capabilities they need to
+                thrive long after we’re gone.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">06</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Create change that sticks
+              </h4>
+              <p class="text-gray-400">
+                We partner with you to design your future-state organization,
+                hire for new roles, and build capabilities across business and
+                technology, coaching you along the way.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">07</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Focus on needs before technology
+              </h4>
+              <p class="text-gray-400">
+                Our technology-agnostic approach means we’re focused on creating
+                the best solution for each situation—and are equally at ease
+                building from scratch or working with existing infrastructure.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">08</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Assemble diverse teams
+              </h4>
+              <p class="text-gray-400">
+                Designing AI solutions to deliver business impact requires
+                diverse teams that integrate business expertise and
+                technological depth. We bring the right skills, at the right
+                time.
+              </p>
+            </div>
+
+            <div class="p-8 principle-card">
+              <div class="principle-number">09</div>
+              <h4
+                class="text-xl font-serif mb-3 text-gray-200 transition-colors"
+              >
+                Embrace innovation as the only constant
+              </h4>
+              <p class="text-gray-400">
+                We invest in advancing technology frontiers and applying the
+                latest learnings. By
+                <a href="#" class="link-style">donating Kedro</a>, we aim to
+                learn more, together with the community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#050e13] text-gray-300">
+      <div class="container mx-auto px-6 lg:px-8 py-12">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8"
+        >
+          <h3 class="text-3xl font-serif mb-4 md:mb-0">
+            Connect with QuantumBlack
+          </h3>
+          <a
+            href="#"
+            class="bg-gray-200 hover:bg-white text-black font-bold py-3 px-6 transition-colors rounded-sm"
+            >Contact us</a
+          >
+        </div>
+        <div class="py-8 border-b border-gray-700">
+          <a
+            href="#"
+            class="inline-flex items-center space-x-2 mr-6 hover:text-white"
+          >
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center space-x-2 hover:text-white"
+          >
+            <i class="fab fa-medium"></i>
+            <span>Medium</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-1">
+            <img
+              src="https://www.mckinsey.com/~/media/mckinsey/dotcom/images/global/mckinsey_logo_white.svg"
+              alt="McKinsey & Company"
+              class="h-6 mb-8"
+            />
+            <h5 class="font-bold mb-4">Subscribe</h5>
+            <p class="text-sm text-gray-400 mb-4">
+              Select topics and stay current with our latest insights
+            </p>
+            <form class="flex items-center">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="bg-transparent border border-gray-500 py-2 px-3 w-full focus:outline-none focus:border-white rounded-l-sm"
+              />
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-r-sm"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+              <div>
+                <a href="#" class="hover:underline">Contact us</a><br />
+                <a href="#" class="hover:underline">Scam warning</a><br />
+                <a href="#" class="hover:underline">FAQ</a>
+              </div>
+              <div>
+                <a href="#" class="hover:underline">Privacy policy</a><br />
+                <a href="#" class="hover:underline">Your privacy choices</a
+                ><br />
+                <a href="#" class="hover:underline">Cookie preferences</a>
+              </div>
+              <div>
+                <a href="#" class="hover:underline">Terms of use</a><br />
+                <a href="#" class="hover:underline"
+                  >Local language information</a
+                >
+              </div>
+              <div>
+                <a href="#" class="hover:underline">Accessibility statement</a>
+              </div>
+            </div>
+            <div class="flex space-x-4 mt-8">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-x-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-full transition-colors"
+                ><i class="fa fa-rss"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 mt-12 pt-8 border-t border-gray-700"
+        >
+          <p>&copy; 1996-2025 McKinsey & Company</p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <p class="text-right">
+              McKinsey Insights - Get our latest thinking on your iPhone, iPad,
+              or Android device.
+            </p>
+
+            <a href="#"
+              ><img
+                src="https://www.mckinsey.com/~/media/mckinsey/dotcom/images/global/app_store_badge.svg"
+                alt="Download on the App Store"
+                class="h-10"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://www.mckinsey.com/~/media/mckinsey/dotcom/images/global/google_play_badge.svg"
+                alt="Get it on Google Play"
+                class="h-10"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
