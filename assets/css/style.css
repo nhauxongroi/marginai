@@ -37,3 +37,25 @@ h4,
   opacity: 0;
   transition: opacity 0.5s linear; /* Điều chỉnh 0.5s để thay đổi tốc độ fade */
 }
+
+.icon-style {
+  height: 64px;
+  width: 64px;
+  stroke: #9ca3af;
+  stroke-width: 0.5;
+  fill: none;
+  transition: stroke 0.3s ease;
+}
+
+.icon-wrapper {
+  transition: transform 0.3s ease;
+}
+.icon-wrapper:hover {
+  transform: translateY(-5px);
+}
+.icon-wrapper:hover .icon-style {
+  stroke: #fff;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
