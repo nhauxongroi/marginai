@@ -1,1 +1,362 @@
-<!DOCTYPE html><html><head><title>Our People</title></head><body><h1>Our People</h1><p>This page is under construction.</p></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Insights - QuantumBlack, AI by McKinsey</title>
+
+    <!-- Tailwind CSS for rapid UI development -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter for body text, EB Garamond for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              // Set Inter as the default sans-serif font
+              sans: ["Inter", "sans-serif"],
+              // Set EB Garamond as the default serif font
+              serif: ["EB Garamond", "serif"],
+            },
+            colors: {
+              // Define a professional color palette
+              "brand-dark": "#111827", // Dark charcoal for text and dark backgrounds
+              "brand-gray": "#6B7280", // Medium gray for secondary text
+              "brand-light-gray": "#F3F4F6", // Light gray for backgrounds
+              "brand-accent": "#0055A4", // A professional, muted blue for accents
+              "brand-border": "#E5E7EB", // Subtle border color
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- HEADER: Clean, structured, and easy to navigate -->
+    <header class="relative w-full text-black bg-[#ffffff] z-20">
+      <div class="relative z-10">
+        <nav class="container mx-auto px-6 py-4 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <button
+                id="mobile-menu-button"
+                class="lg:hidden text-white focus:outline-none"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              </button>
+              <a href="#" class="flex items-center space-x-2">
+                <img
+                  src="https://placehold.co/40x40/ffffff/000000?text=MG"
+                  alt="Logo"
+                  class="h-8 w-8"
+                />
+                <span class="text-sm font-semibold leading-tight"
+                  >Margin AI<br />AI Automation for Traditional Businesses</span
+                >
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center space-x-6 text-sm">
+              <div class="flex flex-col items-start -space-y-1">
+                <span class="text-xs text-gray-400"
+                  >Artificial Intelligence</span
+                >
+                <a href="index.html" class="hover:text-blue-400">Overview</a>
+              </div>
+              <a href="our-approach.html" class="hover:text-blue-400"
+                >Our Approach</a
+              >
+              <!-- <a href="labs.html" class="hover:text-blue-400">Labs</a>
+              <a href="case-studies.html" class="hover:text-blue-400"
+                >Case Studies</a
+              > -->
+              <a href="our-insights.html" class="hover:text-blue-400"
+                >Our Insights</a
+              >
+              <a
+                href="our-people.html"
+                class="hover:text-blue-400 border-b-2 border-black pb-1"
+                >Our People</a
+              >
+              <a href="contact-us.html" class="hover:text-blue-400"
+                >Contact Us</a
+              >
+            </div>
+            <div class="lg:hidden">
+              <button class="hover:text-blue-400">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden bg-[#050e13] bg-opacity-90 absolute top-16 left-0 w-full z-20"
+        >
+          <div
+            class="container mx-auto px-6 py-4 flex flex-col space-y-4 text-center"
+          >
+            <a href="index.html" class="hover:text-blue-400">Overview</a>
+            <a href="our-approach.html" class="hover:text-blue-400"
+              >Our Approach</a
+            >
+            <!-- <a href="labs.html" class="hover:text-blue-400">Labs</a>
+            <a href="case-studies.html" class="hover:text-blue-400"
+              >Case Studies</a
+            > -->
+            <a href="our-insights.html" class="hover:text-blue-400"
+              >Our Insights</a
+            >
+            <a href="our-people.html" class="hover:text-blue-400">Our People</a>
+            <a href="contact-us.html" class="hover:text-blue-400">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <section class="relative hero-section bg-cover bg-center text-white">
+        <!-- <div class="absolute inset-0 bg-black opacity-40"></div> -->
+        <img
+          src="assets/media/office.jpg"
+          alt="Hero Background"
+          class="w-full h-96 object-cover absolute"
+        />
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative container mx-auto px-6 lg:px-8 py-24 md:py-32">
+          <div class="max-w-3xl">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+            >
+              We accelerate sustainable and inclusive growth
+            </h1>
+          </div>
+        </div>
+        <div class="relative bg-[#002D62] text-gray-200">
+          <div class="container mx-auto px-6 lg:px-8 py-12">
+            <p class="max-w-4xl text-base md:text-lg leading-relaxed">
+              Our clients are always pushing forward. Testing. Challenging.
+              Striving for the change that changes everything. We partner with
+              bold leaders every step of the way. Pinpointing the strategy that
+              will reshape tomorrow. Harnessing innovation to reach net zero.
+              Transforming through technology. Developing skills and
+              capabilities across their organization.
+              <br /><br />
+              Together we’re accelerating toward a more sustainable, inclusive,
+              and growing future for all.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-4xl md:text-5xl font-bold mb-6">Who we are</h2>
+              <p class="text-gray-600 leading-relaxed">
+                Our firm is designed to operate as one—a single global
+                partnership united by a strong set of values. We are equally
+                committed to bottle sides of our mission: attracting and
+                developing a talented and diverse group of colleagues and
+                helping our clients create meaningful and lasting change.
+              </p>
+            </div>
+            <div>
+              <img
+                src="assets/media/Consultant.jpg"
+                alt="Our team in a meeting"
+                class="rounded-lg w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Pillars -->
+      <!-- <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div>
+              <h4 class="text-xl font-bold mb-3">Our people & leadership</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                We are defined by our people and are deeply committed to
+                creating a diverse and inclusive culture.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-semibold text-sm hover:underline"
+                >Meet our leadership →</a
+              >
+            </div>
+            <div>
+              <h4 class="text-xl font-bold mb-3">Purpose, mission & values</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                See the guiding principles that inform our long-term strategy as
+                well as how we serve our clients.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-semibold text-sm hover:underline"
+                >Learn about our values →</a
+              ><br />
+              <a
+                href="#"
+                class="text-blue-600 font-semibold text-sm hover:underline"
+                >Explore the history of our firm →</a
+              >
+            </div>
+            <div>
+              <h4 class="text-xl font-bold mb-3">Our aspiration</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                We help clients pursue sustainability, inclusion, and growth,
+                all at the same time.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-semibold text-sm hover:underline"
+                >Explore a new kind of growth →</a
+              >
+            </div>
+            <div>
+              <h4 class="text-xl font-bold mb-3">Our governance</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                We are a values-driven organization and work to meet the highest
+                professional and ethical standards.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 font-semibold text-sm hover:underline"
+                >Learn about our governance →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <!-- FOOTER: Well-structured and informative -->
+    <footer class="bg-[#050e13] text-gray-300 mt-20">
+      <div class="container mx-auto px-6 lg:px-8 py-12">
+        <!-- Top Section: Connect and Subscribe -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 border-b border-gray-700 pb-8"
+        >
+          <!-- Connect Section -->
+          <div class="flex-1">
+            <h3 class="text-3xl font-serif mb-4">
+              Connect with <span class="font-semibold">Margin AI</span>
+            </h3>
+            <div class="flex space-x-2">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-md transition-colors"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-md transition-colors"
+                ><i class="fab fa-x-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-md transition-colors"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-md transition-colors"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center rounded-md transition-colors"
+                ><i class="fa fa-rss"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Subscribe Section -->
+          <div class="flex-1 w-full max-w-md">
+            <h5 class="font-bold mb-2 text-white">Subscribe</h5>
+            <p class="text-sm text-gray-400 mb-4">
+              Select topics and stay current with our latest insights
+            </p>
+            <form class="flex items-center">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="bg-transparent border border-gray-500 py-2 px-3 w-full focus:outline-none focus:border-white rounded-l-md"
+              />
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-r-md"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Bottom Section: Copyright -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 mt-8"
+        >
+          <div class="text-right mt-4 md:mt-0">
+            <p>
+              Margin AI is a registered trademark of Margin AI, Inc. All rights
+              reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Simple script for mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
