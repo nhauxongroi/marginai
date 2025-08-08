@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="bg-[#050e13] text-gray-200 overflow-x-hidden">
-    <header
+    <!-- <header
       class="relative h-screen w-full flex flex-col text-white overflow-hidden"
     >
       <video
@@ -42,8 +42,6 @@
         <source src="assets/media/splashvideo.mp4" type="video/mp4" />
         Trình duyệt của bạn không hỗ trợ thẻ video.
       </video>
-
-      <!-- <div class="absolute inset-0 bg-[#0c141a] bg-opacity-50 z-0"></div> -->
 
       <div class="relative z-10 flex flex-col flex-grow">
         <nav class="container mx-auto px-6 py-4 lg:px-8">
@@ -93,10 +91,6 @@
               <a href="our-approach.html" class="hover:text-blue-400"
                 >Our Approach</a
               >
-              <!-- <a href="labs.html" class="hover:text-blue-400">Labs</a>
-              <a href="case-studies.html" class="hover:text-blue-400"
-                >Case Studies</a
-              > -->
               <a href="our-insights.html" class="hover:text-blue-400"
                 >Our Insights</a
               >
@@ -139,8 +133,6 @@
             <a href="our-approach.html" class="hover:text-blue-400"
               >Our Approach</a
             >
-            <!-- <a href="#" class="hover:text-blue-400">Labs</a>
-            <a href="#" class="hover:text-blue-400">Case Studies</a> -->
             <a href="#" class="hover:text-blue-400">Our Insights</a>
             <a href="#" class="hover:text-blue-400">Our People</a>
             <a href="#" class="hover:text-blue-400">Contact Us</a>
@@ -162,6 +154,135 @@
             </p>
             <a
               href="#"
+              class="inline-block mt-8 px-6 py-3 border border-white hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Start with a Free Pilot →
+            </a>
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <header
+      class="relative h-screen w-full flex flex-col text-white overflow-hidden"
+    >
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        id="fading-video"
+        class="hero-video"
+      >
+        <source src="assets/media/splashvideo.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+      </video>
+
+      <div class="relative z-10 flex flex-col flex-grow">
+        <nav class="container mx-auto px-6 py-4 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <button
+                id="mobile-menu-button"
+                class="lg:hidden text-white focus:outline-none"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              </button>
+              <a href="#" class="flex items-center space-x-2">
+                <img
+                  src="https://placehold.co/40x40/ffffff/000000?text=MG"
+                  alt="Logo"
+                  class="h-8 w-8"
+                />
+                <span class="text-sm font-semibold leading-tight"
+                  >Margin AI<br />AI Automation for Traditional Businesses</span
+                >
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center space-x-6 text-sm">
+              <div class="flex flex-col items-start -space-y-1">
+                <span class="text-xs text-gray-400"
+                  >Artificial Intelligence</span
+                >
+                <a
+                  href="#"
+                  class="hover:text-blue-400 border-b-2 border-white pb-1"
+                  >Overview</a
+                >
+              </div>
+              <a href="#our-approach" class="hover:text-blue-400"
+                >Our Approach</a
+              >
+              <a href="#our-insights" class="hover:text-blue-400"
+                >Our Insights</a
+              >
+              <a href="#our-people" class="hover:text-blue-400">Our People</a>
+              <a href="#contact-us" class="hover:text-blue-400">Contact Us</a>
+            </div>
+            <div class="lg:hidden">
+              <button class="hover:text-blue-400">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden bg-[#050e13] bg-opacity-90 absolute top-16 left-0 w-full z-20"
+        >
+          <div
+            class="container mx-auto px-6 py-4 flex flex-col space-y-4 text-center"
+          >
+            <a href="#" class="hover:text-blue-400">Overview</a>
+            <a href="#our-approach" class="hover:text-blue-400">Our Approach</a>
+            <a href="#our-insights" class="hover:text-blue-400">Our Insights</a>
+            <a href="#our-people" class="hover:text-blue-400">Our People</a>
+            <a href="#contact-us" class="hover:text-blue-400">Contact Us</a>
+            <hr class="border-gray-700" />
+            <a href="#" class="hover:text-blue-400">Sign In</a>
+            <a href="#" class="hover:text-blue-400">Subscribe</a>
+          </div>
+        </div>
+
+        <div class="flex-grow flex items-center justify-center text-center">
+          <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold">
+              Artificial Intelligence
+            </h1>
+            <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+              We build AI-powered workflows that solve the toughest sales and
+              marketing inefficiencies in traditional SMEs—without requiring any
+              technical background.
+            </p>
+            <a
+              href="#contact-us"
               class="inline-block mt-8 px-6 py-3 border border-white hover:bg-white hover:text-black transition-colors duration-300"
             >
               Start with a Free Pilot →
@@ -191,8 +312,8 @@
         </div>
       </section>
 
-      <!-- Our Solution -->
       <section
+        id="our-approach"
         class="py-16 px-4 md:px-16 lg:px-32 xl:px-32 md:py-24 bg-[#0c141a]"
       >
         <div class="container mx-auto px-4 md:px-8">
@@ -520,7 +641,7 @@
         </div>
       </section>
 
-      <section class="py-16 md:py-24 bg-[#050e13]">
+      <section class="py-16 md:py-24 bg-[#050e13]" id="our-people">
         <div class="container mx-auto px-4 md:px-8">
           <h2
             class="text-3xl md:text-4xl font-serif leading-tight text-center mb-12"
@@ -571,7 +692,7 @@
       </section>
 
       <!-- OUR INSIGHTS -->
-      <section class="py-16 md:py-24">
+      <section class="py-16 md:py-24" id="our-insights">
         <div class="container mx-auto px-4 md:px-8">
           <div class="text-center max-w-3xl mx-auto">
             <h2
@@ -637,6 +758,28 @@
                 CONSULTANT
               </h4>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24" id="contact-us">
+        <div class="container mx-auto px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-lg mb-12">
+              We’d love to hear from you. Please fill out the form below to get
+              in touch.
+            </p>
+          </div>
+
+          <!-- Embedded Form Wrapper to hide the bottom 23px -->
+          <div class="max-w-4xl mx-auto">
+            <iframe
+              src="https://kstgroup-n8n.digitalfactory.vn/form/1122650a-da5c-432d-9d0f-2a545c867e0b"
+              style="width: 100%; height: 550px; border: none"
+              frameborder="0"
+              title="Contact Us Form"
+            ></iframe>
           </div>
         </div>
       </section>
