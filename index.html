@@ -386,89 +386,104 @@
       </section>
 
       <!-- Our Offerings -->
-      <section class="py-16 md:py-24">
+      <section class="py-16 md:py-24 bg-[#050e13]" id="our-offerings">
         <div class="container mx-auto px-4 md:px-8">
           <h2
-            class="text-3xl md:text-4xl font-serif leading-tight text-center py-8"
+            class="text-3xl md:text-4xl font-serif leading-tight text-center py-8 text-white"
           >
             Our Offerings
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+
+          <!-- Mobile: 1 cột | sm: 2 | xl: 4 -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8"
+          >
+            <!-- Card 1 -->
             <div
-              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+              class="h-full flex flex-col rounded-lg bg-[#111827] border border-white/10 p-5 sm:p-6 pt-6 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-400 transition duration-300 focus-within:ring-2 focus-within:ring-blue-500/50"
             >
-              <h4
-                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
-              >
-                AI-Powered Workflow Automation
-              </h4>
-              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
-                We build intelligent automations tailored to your sales &
-                marketing pipelines—designed to reduce manual work, boost
-                conversion, and scale effortlessly.
-              </p>
+              <div class="border-t-2 border-blue-500 pt-4">
+                <h4 class="text-xl md:text-2xl font-serif mb-3 text-white">
+                  AI-Powered Workflow Automation
+                </h4>
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                  We build intelligent automations tailored to your sales &
+                  marketing pipelines—designed to reduce manual work, boost
+                  conversion, and scale effortlessly.
+                </p>
+              </div>
               <a
                 href="#"
-                class="text-blue-400 hover:underline group-hover:text-blue-200"
-                >Learn more about AI Automation →</a
+                class="mt-4 md:mt-6 inline-flex items-center gap-1 text-blue-400 hover:underline hover:text-blue-200"
               >
+                Learn more about AI Automation →
+              </a>
             </div>
+
+            <!-- Card 2 -->
             <div
-              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+              class="h-full flex flex-col rounded-lg bg-[#111827] border border-white/10 p-5 sm:p-6 pt-6 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-400 transition duration-300 focus-within:ring-2 focus-within:ring-blue-500/50"
             >
-              <h4
-                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
-              >
-                Custom AI Roadmap
-              </h4>
-              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
-                From a deep analysis of your operations, we create a strategic
-                roadmap for AI adoption—prioritized by impact, feasibility, and
-                ROI potential.
-              </p>
+              <div class="border-t-2 border-blue-500 pt-4">
+                <h4 class="text-xl md:text-2xl font-serif mb-3 text-white">
+                  Custom AI Roadmap
+                </h4>
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                  From a deep analysis of your operations, we create a strategic
+                  roadmap for AI adoption— prioritized by impact, feasibility,
+                  and ROI potential.
+                </p>
+              </div>
               <a
                 href="#"
-                class="text-blue-400 hover:underline group-hover:text-blue-200"
-                >Explore our AI Strategy Service →</a
+                class="mt-4 md:mt-6 inline-flex items-center gap-1 text-blue-400 hover:underline hover:text-blue-200"
               >
+                Explore our AI Strategy Service →
+              </a>
             </div>
+
+            <!-- Card 3 -->
             <div
-              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+              class="h-full flex flex-col rounded-lg bg-[#111827] border border-white/10 p-5 sm:p-6 pt-6 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-400 transition duration-300 focus-within:ring-2 focus-within:ring-blue-500/50"
             >
-              <h4
-                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
-              >
-                No-Risk Pilot Program
-              </h4>
-              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
-                Our signature offering: a free pilot where we turn your team's
-                top processes into a working AI system with measurable
-                ROI—before you commit to anything.
-              </p>
+              <div class="border-t-2 border-blue-500 pt-4">
+                <h4 class="text-xl md:text-2xl font-serif mb-3 text-white">
+                  No-Risk Pilot Program
+                </h4>
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                  Our signature offering: a free pilot where we turn your team's
+                  top processes into a working AI system with measurable
+                  ROI—before you commit to anything.
+                </p>
+              </div>
               <a
                 href="#"
-                class="text-blue-400 hover:underline group-hover:text-blue-200"
-                >Learn more about our Pilot Model →</a
+                class="mt-4 md:mt-6 inline-flex items-center gap-1 text-blue-400 hover:underline hover:text-blue-200"
               >
+                Learn more about our Pilot Model →
+              </a>
             </div>
+
+            <!-- Card 4 -->
             <div
-              class="border-t-2 border-blue-500 pt-6 p-6 hover:border-blue-400 hover:-translate-y-2 hover:shadow-xl transition duration-300 bg-[#111827] rounded-lg cursor-pointer group hover:bg-blue-900 hover:text-blue-200"
+              class="h-full flex flex-col rounded-lg bg-[#111827] border border-white/10 p-5 sm:p-6 pt-6 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-400 transition duration-300 focus-within:ring-2 focus-within:ring-blue-500/50"
             >
-              <h4
-                class="text-2xl font-serif mb-4 group-hover:text-blue-200 p-2"
-              >
-                Community-as-a-Service
-              </h4>
-              <p class="text-gray-300 mb-4 group-hover:text-blue-200 p-2">
-                Beyond services, we power a global learning hub where
-                freelancers & solopreneurs access our proven templates and
-                workflows to launch their own AI solutions.
-              </p>
+              <div class="border-t-2 border-blue-500 pt-4">
+                <h4 class="text-xl md:text-2xl font-serif mb-3 text-white">
+                  Community-as-a-Service
+                </h4>
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                  Beyond services, we power a global learning hub where
+                  freelancers & solopreneurs access our proven templates and
+                  workflows to launch their own AI solutions.
+                </p>
+              </div>
               <a
                 href="#"
-                class="text-blue-400 hover:underline group-hover:text-blue-200"
-                >Join our AI Community →</a
+                class="mt-4 md:mt-6 inline-flex items-center gap-1 text-blue-400 hover:underline hover:text-blue-200"
               >
+                Join our AI Community →
+              </a>
             </div>
           </div>
         </div>
@@ -644,31 +659,35 @@
       <section class="py-16 md:py-24 bg-[#050e13]" id="our-people">
         <div class="container mx-auto px-4 md:px-8">
           <h2
-            class="text-3xl md:text-4xl font-serif leading-tight text-center mb-12"
+            class="text-3xl md:text-4xl font-serif leading-tight text-center mb-12 text-white"
           >
             Our Leadership
           </h2>
+
+          <!-- Dùng GRID để auto-wrap theo breakpoint -->
           <div
-            class="flex flex-row flex-nowrap justify-center items-start gap-8 md:gap-10"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 justify-items-center"
           >
-            <div class="text-center flex-shrink-0">
+            <!-- Card 1 -->
+            <div class="text-center w-full max-w-[220px]">
               <div class="bg-black rounded-2xl p-1.5 inline-block">
                 <img
                   src="assets/media/A Hùng.jpg"
                   alt="Hung Pham"
-                  class="w-auto h-80 rounded-xl"
+                  class="w-full h-60 sm:h-72 md:h-80 rounded-xl object-cover"
                 />
               </div>
               <h4 class="text-2xl font-semibold text-white mt-4">Hung Pham</h4>
               <p class="text-gray-400">Founder</p>
             </div>
 
-            <div class="text-center flex-shrink-0">
+            <!-- Card 2 -->
+            <div class="text-center w-full max-w-[220px]">
               <div class="bg-black rounded-2xl p-1.5 inline-block">
                 <img
                   src="assets/media/CongNguyen.jpg"
-                  alt="Diep Anh"
-                  class="w-auto h-80 rounded-xl"
+                  alt="Cong Nguyen"
+                  class="w-full h-60 sm:h-72 md:h-80 rounded-xl object-cover"
                 />
               </div>
               <h4 class="text-2xl font-semibold text-white mt-4">
@@ -676,12 +695,14 @@
               </h4>
               <p class="text-gray-400">Data Scientist</p>
             </div>
-            <div class="text-center flex-shrink-0">
+
+            <!-- Card 3 -->
+            <div class="text-center w-full max-w-[220px]">
               <div class="bg-black rounded-2xl p-1.5 inline-block">
                 <img
                   src="assets/media/DiepAnh.jpg"
                   alt="Diep Anh"
-                  class="w-auto h-80 rounded-xl"
+                  class="w-full h-60 sm:h-72 md:h-80 rounded-xl object-cover"
                 />
               </div>
               <h4 class="text-2xl font-semibold text-white mt-4">Diep Anh</h4>
@@ -762,8 +783,8 @@
         </div>
       </section>
 
-      <section class="py-16 md:py-24" id="contact-us">
-        <div class="container mx-auto px-6 lg:px-8">
+      <section class="py-16 md:py-24 bg-black" id="contact-us">
+        <div class="container mx-auto px-2 lg:px-8">
           <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p class="text-lg mb-12">
@@ -776,7 +797,7 @@
           <div class="max-w-4xl mx-auto">
             <iframe
               src="https://kstgroup-n8n.digitalfactory.vn/form/1122650a-da5c-432d-9d0f-2a545c867e0b"
-              style="width: 100%; height: 550px; border: none"
+              style="width: 100%; height: 660px; border: none"
               frameborder="0"
               title="Contact Us Form"
             ></iframe>
