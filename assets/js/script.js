@@ -27,3 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Sticky navigation
+document.addEventListener('DOMContentLoaded', (event) => {
+    const nav = document.getElementById('main-nav');
+    if (nav) {
+        const stickyPoint = nav.offsetTop;
+        window.onscroll = function() {
+            if (window.pageYOffset > stickyPoint) {
+                nav.classList.add("sticky-nav");
+            } else {
+                nav.classList.remove("sticky-nav");
+            }
+        };
+    }
+});

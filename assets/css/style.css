@@ -59,3 +59,13 @@ h4,
 body {
   font-family: "Inter", sans-serif;
 }
+
+#main-nav.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #050e13;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
