@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /temp/
+Allow: /
+
+Sitemap: https://marginai.co/sitemap.xml
