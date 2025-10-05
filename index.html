@@ -1143,5 +1143,23 @@
           "https://kstgroup-n8n.digitalfactory.vn/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat",
       });
     </script>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const toggle = document.querySelector(".chat-window-toggle");
+          if (toggle) {
+            const svgs = toggle.querySelectorAll("svg");
+            svgs.forEach((svg) => svg.remove());
+
+            const img = document.createElement("img");
+            img.src = "assets/media/chatbot-icon.png";
+            img.alt = "Chat";
+            img.width = 64;
+            img.height = 64;
+            toggle.appendChild(img);
+          }
+        }, 50);
+      });
+    </script>
   </body>
 </html>
