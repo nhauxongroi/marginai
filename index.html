@@ -1131,5 +1131,17 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import { createChat } from "/assets/js/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://kstgroup-n8n.digitalfactory.vn/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat",
+      });
+    </script>
   </body>
 </html>
