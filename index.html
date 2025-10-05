@@ -48,9 +48,11 @@
       .chat-window-wrapper .chat-window-toggle {
         background: #0a1f2e00 !important;
       }
-      .chat-window-wrapper {
-        bottom: 4rem !important;
-        right: 4rem !important;
+      @media screen and (min-width: 768px) {
+        .chat-window-wrapper {
+          bottom: 4rem !important;
+          right: 4rem !important;
+        }
       }
       .chat-window-wrapper .chat-window {
         height: 550px !important;
@@ -58,9 +60,13 @@
       }
       @media screen and (max-width: 768px) {
         .chat-window-wrapper .chat-window {
-          height: 550px !important;
-          margin-bottom: -70px !important;
-          margin-right: -70px !important;
+          bottom: 0px !important;
+          right: 0px !important;
+        }
+        .chat-window-wrapper {
+          bottom: 2rem !important;
+          right: 2rem !important;
+          max-width: 85% !important;
         }
         .chat-window-toggle img {
           width: 200px !important;
