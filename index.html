@@ -49,8 +49,12 @@
         background: #0a1f2e00 !important;
       }
       .chat-window-wrapper {
-        bottom: 6rem !important;
-        right: 6rem !important;
+        bottom: 4rem !important;
+        right: 4rem !important;
+      }
+      .chat-window-wrapper .chat-window {
+        height: 550px !important;
+        margin-bottom: -60px !important;
       }
     </style>
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -1161,8 +1165,8 @@
             const img = document.createElement("img");
             img.src = "assets/media/chatbot-icon.png";
             img.alt = "Chat";
-            img.width = 300;
-            img.height = 300;
+            img.width = 260;
+            img.height = 260;
             img.style.maxWidth = "none";
             toggle.appendChild(img);
           }
