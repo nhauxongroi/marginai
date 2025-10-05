@@ -45,6 +45,13 @@
         background-color: #031119;
         color: #e0e0e0;
       }
+      .chat-window-wrapper .chat-window-toggle {
+        background: #0a1f2e00 !important;
+      }
+      .chat-window-wrapper {
+        bottom: 6rem !important;
+        right: 6rem !important;
+      }
     </style>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -1154,12 +1161,101 @@
             const img = document.createElement("img");
             img.src = "assets/media/chatbot-icon.png";
             img.alt = "Chat";
-            img.width = 64;
-            img.height = 64;
+            img.width = 300;
+            img.height = 300;
+            img.style.maxWidth = "none";
             toggle.appendChild(img);
           }
         }, 50);
       });
     </script>
+    <style>
+      /* 🌑 Nền & khung tổng thể */
+      .chat-window {
+        background-color: #0b0d12 !important; /* Rich Black */
+        color: #f1f1f1 !important; /* Ghost White text */
+      }
+
+      /* 🧠 Vùng bố cục */
+      .chat-layout,
+      .chat-wrapper {
+        background-color: #1a1b25 !important; /* Raisin Black */
+        color: #f1f1f1 !important;
+      }
+
+      /* 🟧 Header */
+      .chat-header {
+        background-color: #232533 !important; /* Gunmetal Blue */
+        color: #ff7e29 !important; /* Pumpkin Orange for main title */
+        border-bottom: 1px solid #2e2f3e !important; /* Charcoal Gray divider */
+      }
+
+      .chat-header h1 {
+        color: #ff7e29 !important;
+      }
+
+      .chat-header p {
+        color: #b5b8c0 !important; /* Cadet Gray subtitle */
+      }
+
+      /* 💬 Tin nhắn */
+      .chat-body {
+        background-color: #1a1b25 !important;
+        color: #f1f1f1 !important;
+      }
+
+      .chat-messages-list {
+        background-color: #1a1b25 !important;
+      }
+
+      .chat-message {
+        color: #f1f1f1 !important;
+      }
+
+      .chat-message-from-bot {
+        background-color: #232533 !important; /* Bot bubble */
+        border: 1px solid #2e2f3e !important;
+      }
+
+      .chat-message-markdown p {
+        color: #f1f1f1 !important;
+      }
+
+      /* ⌨️ Input & footer */
+      .chat-footer {
+        background-color: #1a1b25 !important;
+        border-top: 1px solid #2e2f3e !important;
+      }
+
+      .chat-input {
+        background-color: #232533 !important;
+        color: #f1f1f1 !important;
+      }
+
+      .chat-inputs textarea {
+        background-color: #232533 !important;
+        color: #f1f1f1 !important;
+        border: 1px solid #2e2f3e !important;
+      }
+
+      .chat-inputs textarea::placeholder {
+        color: #888da1 !important; /* Soft gray */
+      }
+
+      /* 🚀 Nút gửi */
+      .chat-input-send-button {
+        background-color: #ff7e29 !important; /* Brand orange */
+        color: #ffffff !important;
+      }
+
+      .chat-input-send-button:disabled {
+        background-color: #444654 !important; /* Muted gray when disabled */
+        color: #888da1 !important;
+      }
+
+      .chat-input-send-button:hover:not(:disabled) {
+        background-color: #ff974f !important; /* Coral orange hover */
+      }
+    </style>
   </body>
 </html>
