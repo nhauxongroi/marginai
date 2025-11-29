@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Waitlist</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Custom style for the pixelated background effect */
+      .pixelated-bg {
+        background-color: #e0f2fe; /* light blue fallback */
+        /* Background-image sẽ được chèn bằng JavaScript */
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Main Container -->
+    <div class="flex flex-col lg:flex-row min-h-screen">
+      <!-- Left Column: Content (UPDATED) -->
+      <div
+        class="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left p-12 lg:p-24 order-2 lg:order-1 pt-24 lg:pt-12"
+      >
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
+          Learn the Skills Behind Modern Success.
+        </h1>
+        <p class="text-lg text-gray-600 max-w-md">
+          Join the Endex waitlist and get early access to courses in business,
+          storytelling, political science, astronomy, human-centered economics,
+          and no-code automation with n8n.
+        </p>
+      </div>
+
+      <!-- Right Column: Form Card -->
+      <div
+        class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12 order-1 lg:order-2 pixelated-bg"
+      >
+        <div class="bg-white rounded-xl shadow-xl p-8 w-full">
+          <!-- Logo/Icon -->
+          <div class="flex justify-center mb-6">
+            <!-- 3x3 Checkerboard SVG -->
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 3 3"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-12 h-12"
+            >
+              <path
+                d="M0 0H1V1H0V0ZM2 0H3V1H2V0ZM1 1H2V2H1V1ZM0 2H1V3H0V2ZM2 2H3V3H2V2Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+
+          <!-- Form Header (UPDATED) -->
+          <h2 class="text-2xl font-semibold text-center mb-2">
+            Get Early Access
+          </h2>
+          <p class="text-sm text-gray-600 text-center mb-8">
+            Sign up now to get priority access and updates.
+          </p>
+
+          <!-- Signup Form - UPDATED -->
+          <form id="waitlist-form" action="#" method="POST" class="space-y-4">
+            <!-- Name Field (UPDATED) -->
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+              />
+            </div>
+
+            <!-- Email Field (UPDATED) -->
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Your Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+              />
+            </div>
+
+            <!-- Select Box: How did you hear (UPDATED) -->
+            <div>
+              <label
+                for="source"
+                class="block text-sm font-medium text-gray-700 mb-2"
+              >
+                How did you hear about us?
+              </label>
+              <select
+                name="source"
+                id="source"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow bg-white appearance-none"
+              >
+                <option value="" disabled selected>Select an option</option>
+                <option value="google">Google</option>
+                <option value="facebook">Facebook</option>
+                <option value="friend">Friend/Colleague</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Checkbox Dropdown: Courses (NEW) -->
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 mb-2">
+                Which courses interest you?
+              </label>
+              <!-- This is the trigger button -->
+              <button
+                type="button"
+                id="course-trigger"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <span class="text-gray-500">Select one or more courses...</span>
+                <!-- Down arrow icon -->
+                <svg
+                  class="w-5 h-5 text-gray-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+
+              <!-- This is the hidden panel -->
+              <div
+                id="course-panel"
+                class="hidden absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg"
+              >
+                <div class="p-4 space-y-2">
+                  <div class="flex items-center">
+                    <input
+                      id="course-mistakes"
+                      name="course-mistakes"
+                      type="checkbox"
+                      class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      value="Successful Mistakes – Turning Failures Into Fuel"
+                    />
+                    <label
+                      for="course-mistakes"
+                      class="ml-2 block text-sm text-gray-900"
+                    >
+                      Successful Mistakes – Turning Failures Into Fuel
+                    </label>
+                  </div>
+
+                  <div class="flex items-center">
+                    <input
+                      id="course-storytelling"
+                      name="course-storytelling"
+                      type="checkbox"
+                      class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      value="The Art of Storytelling – Craft Narratives That Inspire"
+                    />
+                    <label
+                      for="course-storytelling"
+                      class="ml-2 block text-sm text-gray-900"
+                    >
+                      The Art of Storytelling – Craft Narratives That Inspire
+                    </label>
+                  </div>
+
+                  <div class="flex items-center">
+                    <input
+                      id="course-political"
+                      name="course-political"
+                      type="checkbox"
+                      class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      value="Foundations of Political Science – Power, Systems & Society"
+                    />
+                    <label
+                      for="course-political"
+                      class="ml-2 block text-sm text-gray-900"
+                    >
+                      Foundations of Political Science – Power, Systems &
+                      Society
+                    </label>
+                  </div>
+
+                  <div class="flex items-center">
+                    <input
+                      id="course-astronomy"
+                      name="course-astronomy"
+                      type="checkbox"
+                      class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      value="Astronomy 101 – Exploring the Cosmic Frontier"
+                    />
+                    <label
+                      for="course-astronomy"
+                      class="ml-2 block text-sm text-gray-900"
+                    >
+                      Astronomy 101 – Exploring the Cosmic Frontier
+                    </label>
+                  </div>
+
+                  <div class="flex items-center">
+                    <input
+                      id="course-economics"
+                      name="course-economics"
+                      type="checkbox"
+                      class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      value="The Economics of Human Flourishing – Wealth, Well-Being & Purpose"
+                    />
+                    <label
+                      for="course-economics"
+                      class="ml-2 block text-sm text-gray-900"
+                    >
+                      The Economics of Human Flourishing – Wealth, Well-Being &
+                      Purpose
+                    </label>
+                  </div>
+
+                  <div class="flex items-center">
+                    <input
+                      id="course-n8n"
+                      name="course-n8n"
+                      type="checkbox"
+                      class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      value="n8n for Beginners – Build Automation Without Coding"
+                    />
+                    <label
+                      for="course-n8n"
+                      class="ml-2 block text-sm text-gray-900"
+                    >
+                      n8n for Beginners – Build Automation Without Coding
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button (UPDATED) -->
+            <button
+              type="submit"
+              class="w-full bg-gray-900 text-white font-semibold py-3 px-4 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 mt-6 transition-colors"
+            >
+              Secure My Spot
+            </button>
+
+            <!-- Simple status text -->
+            <p id="form-status" class="text-sm text-center mt-3 hidden"></p>
+          </form>
+          <!-- End of Updated Form -->
+
+          <!-- Footer Link -->
+          <p class="text-sm text-gray-600 text-center mt-8">
+            Already have an account?
+            <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
+              Continue to sign in
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script (UPDATED) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // ---- WEBHOOK CONFIG ----
+        const WEBHOOK_URL =
+          "https://kstgroup-n8n.digitalfactory.vn/webhook/65fd2ea2-7ef1-4c4e-ad5c-491c9bcbf5b9"; // đổi URL này
+
+        // --- Script cho nền Pixelated ---
+        function createPixelatedBg() {
+          const numSquaresX = 16;
+          const numSquaresY = 16;
+          const startColor = { r: 88, g: 176, b: 199 };
+          const endColor = { r: 255, g: 255, b: 255 };
+          let svg = `<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">`;
+          const totalSteps = numSquaresX + numSquaresY - 2;
+
+          for (let y = 0; y < numSquaresY; y++) {
+            for (let x = 0; x < numSquaresX; x++) {
+              const px = x * (100 / numSquaresX);
+              const py = y * (100 / numSquaresY);
+              const percent = (x + (numSquaresY - 1 - y)) / totalSteps;
+              const r = Math.floor(
+                endColor.r + (startColor.r - endColor.r) * percent
+              );
+              const g = Math.floor(
+                endColor.g + (startColor.g - endColor.g) * percent
+              );
+              const b = Math.floor(
+                endColor.b + (startColor.b - endColor.b) * percent
+              );
+              svg += `<rect x="${px}%" y="${py}%" width="${
+                100 / numSquaresX
+              }%" height="${100 / numSquaresY}%" fill="rgb(${r},${g},${b})" />`;
+            }
+          }
+          svg += `</svg>`;
+          return svg;
+        }
+
+        const svgString = createPixelatedBg();
+        const base64Svg = btoa(svgString);
+        const bgElement = document.querySelector(".pixelated-bg");
+
+        if (bgElement) {
+          bgElement.style.backgroundImage = `url("data:image/svg+xml;base64,${base64Svg}")`;
+          bgElement.style.backgroundSize = "cover";
+        }
+
+        // --- Script cho Dropdown Checkbox (NEW) ---
+        const courseTrigger = document.getElementById("course-trigger");
+        const coursePanel = document.getElementById("course-panel");
+        const courseTriggerText = courseTrigger.querySelector("span");
+        const courseCheckboxes = coursePanel.querySelectorAll(
+          'input[type="checkbox"]'
+        );
+
+        if (courseTrigger && coursePanel) {
+          // Mở/đóng panel khi nhấp vào trigger
+          courseTrigger.addEventListener("click", () => {
+            coursePanel.classList.toggle("hidden");
+          });
+
+          // Đóng panel khi nhấp ra ngoài
+          window.addEventListener("click", (e) => {
+            if (
+              !courseTrigger.contains(e.target) &&
+              !coursePanel.contains(e.target)
+            ) {
+              coursePanel.classList.add("hidden");
+            }
+          });
+
+          // Cập nhật văn bản của trigger dựa trên lựa chọn
+          const updateTriggerText = () => {
+            const selectedCourses = [];
+            courseCheckboxes.forEach((checkbox) => {
+              if (checkbox.checked) {
+                selectedCourses.push(checkbox.nextElementSibling.textContent);
+              }
+            });
+
+            if (selectedCourses.length === 0) {
+              courseTriggerText.textContent = "Select one or more courses...";
+              courseTriggerText.classList.add("text-gray-500");
+            } else if (selectedCourses.length === 1) {
+              courseTriggerText.textContent = selectedCourses[0];
+              courseTriggerText.classList.remove("text-gray-500");
+            } else {
+              courseTriggerText.textContent = `${selectedCourses.length} courses selected`;
+              courseTriggerText.classList.remove("text-gray-500");
+            }
+          };
+
+          // Thêm trình lắng nghe cho mỗi checkbox
+          courseCheckboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", updateTriggerText);
+          });
+        }
+
+        // --- GỬI FORM TỚI WEBHOOK ---
+        const form = document.getElementById("waitlist-form");
+        const statusEl = document.getElementById("form-status");
+
+        if (form) {
+          form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const selectedCourses = [];
+            courseCheckboxes.forEach((checkbox) => {
+              if (checkbox.checked) {
+                selectedCourses.push(checkbox.value);
+              }
+            });
+
+            const payload = {
+              name: formData.get("name"),
+              email: formData.get("email"),
+              source: formData.get("source"),
+              courses: selectedCourses,
+              submittedAt: new Date().toISOString(),
+            };
+
+            // UI: báo đang gửi
+            if (statusEl) {
+              statusEl.classList.remove("hidden");
+              statusEl.classList.remove("text-red-600", "text-green-600");
+              statusEl.classList.add("text-gray-600");
+              statusEl.textContent = "Submitting...";
+            }
+
+            try {
+              const res = await fetch(WEBHOOK_URL, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+              });
+
+              if (!res.ok) {
+                throw new Error("Request failed with status " + res.status);
+              }
+
+              if (statusEl) {
+                statusEl.classList.remove("text-gray-600", "text-red-600");
+                statusEl.classList.add("text-green-600");
+                statusEl.textContent = "Thank you! Your spot is secured.";
+              }
+
+              // Reset form (tùy bạn giữ hay không)
+              form.reset();
+              if (courseTriggerText) {
+                courseTriggerText.textContent = "Select one or more courses...";
+                courseTriggerText.classList.add("text-gray-500");
+              }
+            } catch (error) {
+              console.error(error);
+              if (statusEl) {
+                statusEl.classList.remove("text-gray-600", "text-green-600");
+                statusEl.classList.add("text-red-600");
+                statusEl.textContent =
+                  "Something went wrong. Please try again later.";
+              }
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
